@@ -7,15 +7,17 @@
     margin: 0;
     box-sizing: border-box;
 }
-a            { text-decoration: none; }
-a:link     { color: #555; }
-a:visited { color: #555; }
-a:hover  { color: #777; }
-a:active  { color: #888; }
-a:focus   { color: #555; }
 
-ul { list-style: none;}
+a         {    text-decoration: none;    }
+a:link    {    color: #555;              }
+a:visited {    color: #555;              }
+a:hover   {    color: #777;              }
+a:active  {    color: #888;              }
+a:focus   {    color: #555;              }
+
+ul         {   list-style: none;         }
 /* Reset 끝 */
+
 
 /* div#wrap 시작 */
 div#wrap {
@@ -28,12 +30,13 @@ div#wrap {
 #wrap>* {
     color: #f00;
     font-size: 40px;
-    height: 100px;
     border: 1px solid #000;
 }
-#header, #aside #footer {
+
+#header, #aside, #footer {
     height: 100px;
 }
+
 /* 슬라이드 쇼 레이아웃 시작 */
 #main div#slideArea {
     width: 1200px;
@@ -41,27 +44,33 @@ div#wrap {
     overflow: hidden;
 }
 
+
 #main div#slideshow {
     width: 3600px;
     height: 300px;
     border: 1px solid #f00;
 
     position: relative;
+    left: 0;
 
+    transition: all  3s;
+
+}
+#main div#slideshow:hover {
+    left: -1200px;
 }
 
 #main #slideshow>ul>li {
+
     position: absolute;
 }
-
 #main #slideshow>ul>li:nth-child(2) {
     left: 1200px;
 }
-#main #slideshow>ul>li:last-child {
-    left: 4200px;
+#main #slideshow>ul>li:nth-child(3) {
+    left: 2400px;
 }
 /* 슬라이드 쇼 레이아웃 끝 */
-
 
 
 
